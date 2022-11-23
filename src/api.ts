@@ -5,5 +5,5 @@ export const loginUser = (data: any) => {
 };
 
 export const signupUser = (data: any) => {
-  return axios.post('/api/account/login', data);
+  return axios.post('/api/account/signup', data);
 };

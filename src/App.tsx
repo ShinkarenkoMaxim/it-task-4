@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
-import {
-  Route,
-  Routes,
-  Navigate,
-  Router,
-  BrowserRouter,
-} from 'react-router-dom';
+import { Route, Routes, Navigate, BrowserRouter } from 'react-router-dom';
 import { Dashboard } from './pages/Dashboard';
 import { Login } from './pages/Login';
+import { Signup } from './pages/Signup';
 
 export const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
@@ -44,6 +39,7 @@ export const App: React.FC = () => {
             path="/login"
             element={<Login onLoggedInChange={handleChangeLoggedIn} />}
           />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </BrowserRouter>
     </div>
