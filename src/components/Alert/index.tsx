@@ -29,7 +29,8 @@ export const Alert: React.FC<Props> = ({ type, message, onChange }) => {
       {isShow && (
         <div
           className={
-            'w-full flex p-2 text-sm justify-betwen rounded' + classAlerts[type]
+            'w-full flex p-2 text-sm justify-between rounded ' +
+            classAlerts[type]
           }
         >
           <span className="font-medium">{message}</span>
